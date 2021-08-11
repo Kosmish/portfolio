@@ -144,6 +144,7 @@ h2
     margin: 0px;
     display: flex;
     justify-content: flex-start;
+    
     align-items: center;
     background-color: #2e3235;
     padding: 5px 0px 5px 0px;
@@ -209,7 +210,7 @@ iframe
 }
 .table-skill, .table-rating
 {
-    
+    text-align: right;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -233,7 +234,7 @@ iframe
 }
 .sub-body
 {
-    width: 600px;
+    max-width: 600px;
     height: 100%;
 }
 .sub-body-p
@@ -245,11 +246,9 @@ iframe
 }
 .sub-nav
 {
-    width: 0px;
-    height: 0px;
     flex-direction: column;
     position: relative;
-    top: 140px;
+    top: 35px;
     left: -360px;
 }
 .sub-link, .sub-link-active
@@ -257,9 +256,9 @@ iframe
     color: #2e3235;
     font-size: 24pt;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin: 10px 10px 10px 10px;
     padding: 10px;
-    background: rgba(0,0,0,0.2);
+    background: #151518;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 1.0);
     transition: 0.1s;
 }
@@ -270,13 +269,14 @@ iframe
 .sub-link-active
 {
     color: #ffffff;
-    background: rgba(0,0,0,0.7);
+    background: #080809;
 }
 .sub-work, .sub-about
 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-wrap: wrap;
     margin-bottom: 20px;
     border-radius: 5px;
     background: rgba(0,0,0,0.2);
@@ -313,6 +313,7 @@ iframe
 .sub-work-tags
 {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
     margin-top: 10px;
@@ -346,6 +347,7 @@ iframe
 {
     margin-bottom: 10px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
 }
@@ -477,3 +479,16 @@ img
 
 .switch-gray{fill:#4d5256;transition: .3s;}
 .contact-white{fill:#b6b6b6;transition: .3s;}
+
+@media screen and (max-width: 800px)
+{
+    .main { padding-top: 175px; }
+    .logo-big { width: 50px; }
+    .btn-svg { width: 50px; }
+    .nav-btns { width: 50px; font-size: 10pt; }
+    .nav-btns-active { width: 50px; }
+    h5 { display: none }
+    .sub-nav { flex-direction: row; left: -5px; top: 20px; background-color: rgba(0,0,0,0.4); border-radius: 10px; width: 90%; }
+    .sub-link-active { background: #080809; }
+    .sub-link { background: #151518; }
+}
